@@ -7,6 +7,12 @@ services:
     ports:
       - 5000:5000
 
+  app-client:
+    image: ada-app-client
+    container_name: app-client
+    depends_on:
+      - app
+
   prometheus:
     image: prom/prometheus
     container_name: prometheus
